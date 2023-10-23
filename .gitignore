@@ -1,0 +1,6 @@
+.next/
+node_modules/
+medq-react/.DS_Store
+medq-react/components/.DS_Store
+tf/.DS_Store
+/next.config.js

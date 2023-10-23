@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Cosmetic Containers",
+    "price": "139.02",
+    "description": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+    "sku": "594-54-9502",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280378/medq/products-img5.jpg"
+  },
+  {
+    "name": "New Microscope",
+    "price": "59.93",
+    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor.",
+    "sku": "868-50-9482",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280378/medq/products-img6.jpg"
+  },
+  {
+    "name": "Hearing Aid Device",
+    "price": "99.57",
+    "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia.",
+    "sku": "534-20-2675",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280379/medq/products-img7.jpg"
+  },
+  {
+    "name": "Metal Stethoscope",
+    "price": "99.23",
+    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor.",
+    "sku": "797-94-5844",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280379/medq/products-img8.jpg"
+  },
+  {
+    "name": "Medical Glass",
+    "price": "99.38",
+    "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+    "sku": "803-74-3669",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280379/medq/products-img9.jpg"
+  },
+  {
+    "name": "Isometric Equipment",
+    "price": "99.18",
+    "description": "Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim.",
+    "sku": "234-56-6575",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280379/medq/products-img10.jpg"
+  },
+  {
+    "name": "Medical Mask",
+    "price": "49.39",
+    "description": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+    "sku": "204-74-3402",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280379/medq/products-img11.jpg"
+  },
+  {
+    "name": "Blood Pressure Monitor",
+    "price": "99.93",
+    "description": "In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum.",
+    "sku": "150-37-2137",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280380/medq/products-img12.jpg"
+  },
+  {
+    "name": "Coronavirus Face Mask",
+    "price": "99.01",
+    "description": "Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue.",
+    "sku": "306-80-4996",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280293/medq/products-img1.jpg"
+  },
+  {
+    "name": "Protective Gloves",
+    "price": "99.23",
+    "description": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh.",
+    "sku": "726-81-7094",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280358/medq/products-img2.jpg"
+  },
+  {
+    "name": "Infrared Thermometer Gun",
+    "price": "99.53",
+    "description": "Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+    "sku": "737-21-7041",
+    "onSale": true,
+    "onOffer": 5,
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280376/medq/products-img3.jpg"
+  },
+  {
+    "name": "Hand Sanitizer",
+    "price": "99.21",
+    "description": "Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "sku": "195-11-7465",
+    "onSale": true,
+    "onOffer": "5",
+    "productType": "medical",
+    "mediaUrl": "https://res.cloudinary.com/dev-empty/image/upload/v1594280378/medq/products-img4.jpg"
+  }
+]
