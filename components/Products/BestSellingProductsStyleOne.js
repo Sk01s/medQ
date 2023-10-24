@@ -120,8 +120,7 @@ const BestSellingProductsStyleOne = ({ products }) => {
                                         <div className="content">
                                             <h3>
                                                 <Link
-                                                    href="/product/[id]"
-                                                    as={`/product/${product._id}`}
+                                                    href={`/product/${product._id}`}
                                                 >
                                                     <a>{product.name}</a>
                                                 </Link>

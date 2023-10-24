@@ -52,7 +52,7 @@ Index.getInitialProps = async (ctx) => {
     const size = 8;
     const searchTerm = "medical";
     // fetch data on server
-    const url = `${baseUrl}/api/products`;
+    const url = `${process.env.BASE_URL}/api/products`;
     const payload = { params: { page, size, searchTerm } };
     try {
         const response = await axios.get(url, payload);

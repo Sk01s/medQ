@@ -47,7 +47,7 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
     } else {
         try {
             const payload = { headers: { Authorization: medq_token } };
-            const url = `${baseUrl}/api/users/account`;
+            const url = `${process.env.BASE_URL}/api/users/account`;
             const response = await axios.get(url, payload);
             const user = response.data;
             const isAdmin = user.role == "admin";

@@ -100,7 +100,7 @@ const AddProductsModal = () => {
             // console.log(imageUrl)
             const mediaUrl = imageUrl.replace(/^http:\/\//i, "https://");
             // console.log(mediaUrl)
-            const url = `${baseUrl}/api/products/create`;
+            const url = `${process.env.BASE_URL}/api/products/create`;
             const { name, price, description, productType, onSale, onOffer } =
                 product;
             const payload = {

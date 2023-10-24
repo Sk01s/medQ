@@ -41,7 +41,7 @@ HomeDemo4.getInitialProps = async (ctx) => {
     const size = 8;
     const searchTerm = "medical";
     try {
-        const url = `${baseUrl}/api/products`;
+        const url = `${process.env.BASE_URL}/api/products`;
 
         const payload = { params: { page, size, searchTerm } };
         const response = await axios.get(url, payload);

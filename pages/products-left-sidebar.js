@@ -1,21 +1,21 @@
-import React from 'react';
-import Link from 'next/link'
-import axios from 'axios';
-import baseUrl from '../utils/baseUrl'
-import PageBanner from '../components/Common/PageBanner';
-import ProductSidebar from '../components/Products/ProductSidebar'
-import AllProducts from '../components/Products/AllProducts';
-import FacilityStyleOne from '../components/Common/FacilityStyleOne';
-import Pagination from '../components/Products/Pagination';
+import React from "react";
+import Link from "next/link";
+import axios from "axios";
+import baseUrl from "../utils/baseUrl";
+import PageBanner from "../components/Common/PageBanner";
+import ProductSidebar from "../components/Products/ProductSidebar";
+import AllProducts from "../components/Products/AllProducts";
+import FacilityStyleOne from "../components/Common/FacilityStyleOne";
+import Pagination from "../components/Products/Pagination";
 
-const ProductsLeftSidebar = ({products, totalPages}) => {
+const ProductsLeftSidebar = ({ products, totalPages }) => {
     return (
         <>
             <PageBanner
-                pageTitle="Products Left Sidebar" 
-                homePageText="Home" 
-                homePageUrl="/" 
-                activePageText="Products Left Sidebar" 
+                pageTitle="Products Left Sidebar"
+                homePageText="Home"
+                homePageUrl="/"
+                activePageText="Products Left Sidebar"
             />
 
             <section className="products-area ptb-70">
@@ -31,7 +31,13 @@ const ProductsLeftSidebar = ({products, totalPages}) => {
                         <div className="col-lg-9 col-md-12">
                             <div className="medq-grid-sorting row align-items-center">
                                 <div className="col-lg-6 col-md-6 result-count">
-                                    <p>We found <span className="count">{products.length}</span> products available for you</p>
+                                    <p>
+                                        We found{" "}
+                                        <span className="count">
+                                            {products.length}
+                                        </span>{" "}
+                                        products available for you
+                                    </p>
                                 </div>
 
                                 <div className="col-lg-6 col-md-6 ordering">
@@ -50,17 +56,17 @@ const ProductsLeftSidebar = ({products, totalPages}) => {
 
                             {/* All Products */}
                             <AllProducts products={products} />
-                            
+
                             <Pagination totalPages={totalPages} />
                         </div>
                     </div>
                 </div>
             </section>
- 
+
             <FacilityStyleOne />
         </>
-    )
-}
+    );
+};
 
 ProductsLeftSidebar.getInitialProps = async (ctx) => {
     // console.log(ctx.query)
@@ -68,12 +74,12 @@ ProductsLeftSidebar.getInitialProps = async (ctx) => {
     const size = 9;
     const searchTerm = ctx.query.term;
     // fetch data on server
-    const url = `${baseUrl}/api/products`;
-    const payload = { params: {page, size, searchTerm}}
+    const url = `${process.env.BASE_URL}/api/products`;
+    const payload = { params: { page, size, searchTerm } };
     const response = await axios.get(url, payload);
     // return response data as an object
-    return response.data
+    return response.data;
     // note: this object will be merge with existing props
-}
+};
 
 export default ProductsLeftSidebar;
