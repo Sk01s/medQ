@@ -56,13 +56,12 @@ const BestSellingProductsStyleOne = ({ products }) => {
                                         <div className="image">
                                             <Link
                                                 href={`/product/${product._id}`}
+                                                className="d-block"
                                             >
-                                                <a className="d-block">
-                                                    <img
-                                                        src={product.mediaUrl}
-                                                        alt={product.name}
-                                                    />
-                                                </a>
+                                                <img
+                                                    src={product.mediaUrl}
+                                                    alt={product.name}
+                                                />
                                             </Link>
 
                                             <div className="new">New</div>
