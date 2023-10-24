@@ -58,6 +58,7 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
             }
             pageProps.user = user;
         } catch (error) {
+            console.log("_app", error);
             destroyCookie(ctx, "medq_token");
         }
     }

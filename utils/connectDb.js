@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const connection = {};
+export const connection = {};
 
 const connectDb = async () => {
     if (connection.isConnected) {
@@ -18,16 +18,16 @@ const connectDb = async () => {
         })
         .then((e) => {
             console.log("connect");
+            connection.isConnected = true;
             return e;
         })
         .catch((e) => {
-            console.error("connect");
+            console.error("error", e);
+            connection.isConnected = false;
             return e;
         });
 
-    console.log("DB Connected");
-
-    connection.isConnected = db.connections?.[0].isReadyState;
+    // console.log("DB Connected");
 };
 
 export default connectDb;

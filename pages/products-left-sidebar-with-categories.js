@@ -12,10 +12,10 @@ const ProductsLeftSidebarWithCategories = ({products, totalPages}) => {
     return (
         <>
             <PageBanner
-                pageTitle="Products Left Sidebar With Categories" 
-                homePageText="Home" 
-                homePageUrl="/" 
-                activePageText="Products Left Sidebar With Categories" 
+                pageTitle="Products Left Sidebar With Categories"
+                homePageText="Home"
+                homePageUrl="/"
+                activePageText="Products Left Sidebar With Categories"
             />
 
             <div className="pt-70 pb-40">
@@ -59,7 +59,7 @@ const ProductsLeftSidebarWithCategories = ({products, totalPages}) => {
                     </div>
                 </div>
             </section>
- 
+
             <FacilityStyleOne />
         </>
     )
