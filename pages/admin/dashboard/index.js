@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Index = () => {
     return (
@@ -8,7 +8,7 @@ const Index = () => {
                     <div className="row">
                         <div className="col-lg-4 col-md-6">
                             <div className="admin-card">
-                                <i className='bx bx-user-plus'></i>
+                                <i className="bx bx-user-plus"></i>
                                 <h3>55</h3>
                                 <p>All Users</p>
                             </div>
@@ -16,7 +16,7 @@ const Index = () => {
 
                         <div className="col-lg-4 col-md-6">
                             <div className="admin-card">
-                                <i className='bx bx-list-check'></i>
+                                <i className="bx bx-list-check"></i>
                                 <h3>24</h3>
                                 <p>All Orders</p>
                             </div>
@@ -24,7 +24,7 @@ const Index = () => {
 
                         <div className="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
                             <div className="admin-card">
-                                <i className='bx bx-cart' ></i>
+                                <i className="bx bx-cart"></i>
                                 <h3>333</h3>
                                 <p>All Products</p>
                             </div>
@@ -33,7 +33,7 @@ const Index = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Index;
