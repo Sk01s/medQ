@@ -25,8 +25,9 @@ const Product = ({ product, related }) => {
 
 Product.getInitialProps = async ({ query: { id } }) => {
     // console.log(id)
-    const url = `${process.env.BASE_URL}/api/products/product`;
+    const url = `${baseUrl}/api/products/product`;
     const payload = { params: { id } };
+    console.log(payload, url);
     const response = await axios.get(url, payload);
     // console.log(response)
     return {

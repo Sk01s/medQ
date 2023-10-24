@@ -52,8 +52,9 @@ HomeDemo2.getInitialProps = async (ctx) => {
     const searchTerm = "medical";
     // fetch data on server
     try {
-        const url = `${process.env.BASE_URL}/api/products`;
+        const url = `${baseUrl}/api/products`;
         const payload = { params: { page, size, searchTerm } };
+        console.log(payload, url);
         const response = await axios.get(url, payload);
         // return response data as an object
         return response.data;

@@ -35,9 +35,10 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = `${process.env.BASE_URL}/api/contact`;
+            const url = `${baseUrl}/api/contact`;
             const { name, email, number, subject, text } = contact;
             const payload = { name, email, number, subject, text };
+            console.log(payload, url);
             const response = await axios.post(url, payload);
             console.log(response);
             setContact(INITIAL_STATE);

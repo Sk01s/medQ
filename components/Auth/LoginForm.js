@@ -31,8 +31,9 @@ const LoginForm = () => {
         try {
             setLoading(true);
             setError("");
-            const url = `${process.env.BASE_URL}/api/users/login`;
+            const url = `${baseUrl}/api/users/login`;
             const payload = { ...user };
+            console.log(payload,url)
             const response = await axios.post(url, payload);
             handleLogin(response.data);
         } catch (error) {

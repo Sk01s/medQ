@@ -73,8 +73,9 @@ ProductsLeftSidebarFullwidth.getInitialProps = async (ctx) => {
     const size = 9;
     const searchTerm = ctx.query.term;
     // fetch data on server
-    const url = `${process.env.BASE_URL}/api/products`;
+    const url = `${baseUrl}/api/products`;
     const payload = { params: { page, size, searchTerm } };
+    console.log(payload,url)
     const response = await axios.get(url, payload);
     // return response data as an object
     return response.data;

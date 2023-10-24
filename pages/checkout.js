@@ -34,9 +34,10 @@ const Checkout = ({ user }) => {
     const handleCheckout = async (paymentData) => {
         try {
             setLoading(true);
-            const url = `${process.env.BASE_URL}/api/users/checkout`;
+            const url = `${baseUrl}/api/users/checkout`;
             const medq_token = cookie.get("medq_token");
             const payload = { paymentData, products };
+            console.log(payload, url);
             const headers = { headers: { Authorization: medq_token } };
             await axios.post(url, payload, headers);
             setSuccess(true);
