@@ -54,7 +54,7 @@ const BestSellingProductsStyleOne = ({ products }) => {
                                 <SwiperSlide key={product._id}>
                                     <div className="single-products-box">
                                         <div className="image">
-                                            <Link
+                                            <a
                                                 href={`/product/${product._id}`}
                                                 className="d-block"
                                             >
@@ -62,7 +62,7 @@ const BestSellingProductsStyleOne = ({ products }) => {
                                                     src={product.mediaUrl}
                                                     alt={product.name}
                                                 />
-                                            </Link>
+                                            </a>
 
                                             <div className="new">New</div>
                                             {product.onSale ? (

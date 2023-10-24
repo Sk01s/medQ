@@ -25,7 +25,7 @@ const Index = ({ products }) => {
                 <CategoriesStyleTwo />
             </div>
 
-            {/* <BestSellingProductsStyleOne products={products} /> */}
+            <BestSellingProductsStyleOne products={products} />
 
             <div className="pb-40">
                 <ProductsPromotionStyleOne />
