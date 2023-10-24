@@ -11,11 +11,9 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-lg-3 col-sm-6 col-md-6">
                             <div className="single-footer-widget">
-                                <Link href="/">
-                                    <a className="logo d-inline-block">
-                                        <img src="/img/logo.png" alt="image" />
-                                    </a>
-                                </Link>
+                                <a href="/" className="logo d-inline-block">
+                                    <img src="/img/logo.png" alt="image" />
+                                </a>
 
                                 <ul className="footer-contact-info">
                                     <li>
@@ -92,34 +90,30 @@ const Footer = () => {
 
                                 <ul className="link-list">
                                     <li>
-                                        <Link href="/about">
-                                            <a>About Us</a>
-                                        </Link>
+                                        <a href="/about">About Us</a>
                                     </li>
                                     <li>
-                                        <Link href="/contact">
-                                            <a>Contact Us</a>
-                                        </Link>
+                                        <a href="/contact">Contact Us</a>
                                     </li>
                                     <li>
-                                        <Link href="/privacy-policy">
-                                            <a>Privacy Policy</a>
-                                        </Link>
+                                        <a href="/privacy-policy">
+                                            Privacy Policy
+                                        </a>
                                     </li>
                                     <li>
-                                        <Link href="/terms-of-service">
-                                            <a>Terms & Conditions</a>
-                                        </Link>
+                                        <a href="/terms-of-service">
+                                            Terms & Conditions
+                                        </a>
                                     </li>
                                     <li>
-                                        <Link href="/customer-service">
-                                            <a>Delivery Information</a>
-                                        </Link>
+                                        <a href="/customer-service">
+                                            Delivery Information
+                                        </a>
                                     </li>
                                     <li>
-                                        <Link href="/customer-service">
-                                            <a>Orders and Returns</a>
-                                        </Link>
+                                        <a href="/customer-service">
+                                            Orders and Returns
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -131,34 +125,26 @@ const Footer = () => {
 
                                 <ul className="link-list">
                                     <li>
-                                        <Link href="/faq">
-                                            <a>Help & FAQs</a>
-                                        </Link>
+                                        <a href="/faq">Help & FAQs</a>
                                     </li>
                                     <li>
-                                        <Link href="/profile-authentication">
-                                            <a>My Account</a>
-                                        </Link>
+                                        <a href="/profile-authentication">
+                                            My Account
+                                        </a>
                                     </li>
                                     <li>
-                                        <Link href="/cart">
-                                            <a>Order History</a>
-                                        </Link>
+                                        <a href="/cart">Order History</a>
                                     </li>
                                     <li>
-                                        <Link href="/cart">
-                                            <a>Wishlist</a>
-                                        </Link>
+                                        <a href="/cart">Wishlist</a>
                                     </li>
                                     <li>
-                                        <Link href="/contact">
-                                            <a>Newsletter</a>
-                                        </Link>
+                                        <a href="/contact">Newsletter</a>
                                     </li>
                                     <li>
-                                        <Link href="/purchase-guide">
-                                            <a>Purchasing Policy</a>
-                                        </Link>
+                                        <a href="/purchase-guide">
+                                            Purchasing Policy
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -197,7 +183,8 @@ const Footer = () => {
                             <div className="col-lg-6 col-md-6">
                                 <p>
                                     Copyright{" "}
-                                    <i className="bx bx-copyright"></i> {currentYear} MedQ. Designed By{" "}
+                                    <i className="bx bx-copyright"></i>{" "}
+                                    {currentYear} MedQ. Designed By{" "}
                                     <a
                                         href="https://envytheme.com/"
                                         target="_blank"

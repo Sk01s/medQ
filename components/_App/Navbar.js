@@ -6,7 +6,7 @@ import {
     searchState,
     productsState,
 } from "../../utils/recoil-atoms";
-import Link from "../../utils/ActiveLink";
+// import Link from "../../utils/ActiveLink";
 import ShoppingCartModal from "./ShoppingCartModal";
 import SearchFormModal from "./SearchFormModal";
 import { handleLogout } from "../../utils/auth";
@@ -60,14 +60,13 @@ const Navbar = ({ user }) => {
                 <div className="medq-nav">
                     <div className="container">
                         <nav className="navbar navbar-expand-md navbar-light">
-                            <Link href="/">
-                                <a
-                                    onClick={() => setCollapsed(true)}
-                                    className="navbar-brand"
-                                >
-                                    <img src="/img/logo.png" alt="logo" />
-                                </a>
-                            </Link>
+                            <a
+                                href="/"
+                                onClick={() => setCollapsed(true)}
+                                className="navbar-brand"
+                            >
+                                <img src="/img/logo.png" alt="logo" />
+                            </a>
 
                             <button
                                 onClick={toggleNavbar}
@@ -90,94 +89,72 @@ const Navbar = ({ user }) => {
                             >
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <Link href="#" activeClassName="active">
-                                            <a
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
-                                                className="nav-link"
-                                            >
-                                                Home{" "}
-                                                <i className="bx bx-chevron-down"></i>
-                                            </a>
-                                        </Link>
+                                        <a
+                                            href="#"
+                                            onClick={(e) => e.preventDefault()}
+                                            className="nav-link"
+                                        >
+                                            Home{" "}
+                                            <i className="bx bx-chevron-down"></i>
+                                        </a>
 
                                         <ul className="dropdown-menu">
                                             <li className="nav-item">
-                                                <Link
+                                                <a
                                                     href="/"
-                                                    activeClassName="active"
+                                                    onClick={() =>
+                                                        setCollapsed(true)
+                                                    }
+                                                    className="nav-link"
                                                 >
-                                                    <a
-                                                        onClick={() =>
-                                                            setCollapsed(true)
-                                                        }
-                                                        className="nav-link"
-                                                    >
-                                                        Home Demo - 1
-                                                    </a>
-                                                </Link>
+                                                    Home Demo - 1
+                                                </a>
                                             </li>
                                             <li className="nav-item">
-                                                <Link
+                                                <a
                                                     href="/home-demo-2"
-                                                    activeClassName="active"
+                                                    onClick={() =>
+                                                        setCollapsed(true)
+                                                    }
+                                                    className="nav-link"
                                                 >
-                                                    <a
-                                                        onClick={() =>
-                                                            setCollapsed(true)
-                                                        }
-                                                        className="nav-link"
-                                                    >
-                                                        Home Demo - 2
-                                                    </a>
-                                                </Link>
+                                                    Home Demo - 2
+                                                </a>
                                             </li>
                                             <li className="nav-item">
-                                                <Link
+                                                <a
                                                     href="/home-demo-3"
-                                                    activeClassName="active"
+                                                    onClick={() =>
+                                                        setCollapsed(true)
+                                                    }
+                                                    className="nav-link"
                                                 >
-                                                    <a
-                                                        onClick={() =>
-                                                            setCollapsed(true)
-                                                        }
-                                                        className="nav-link"
-                                                    >
-                                                        Home Demo - 3
-                                                    </a>
-                                                </Link>
+                                                    Home Demo - 3
+                                                </a>
                                             </li>
                                             <li className="nav-item">
-                                                <Link
+                                                <a
                                                     href="/home-demo-4"
-                                                    activeClassName="active"
+                                                    onClick={() =>
+                                                        setCollapsed(true)
+                                                    }
+                                                    className="nav-link"
                                                 >
-                                                    <a
-                                                        onClick={() =>
-                                                            setCollapsed(true)
-                                                        }
-                                                        className="nav-link"
-                                                    >
-                                                        Home Demo - 4
-                                                    </a>
-                                                </Link>
+                                                    Home Demo - 4
+                                                </a>
                                             </li>
                                         </ul>
                                     </li>
 
                                     <li className="nav-item megamenu">
-                                        <Link href="#" activeClassName="active">
-                                            <a
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
-                                                className="nav-link"
-                                            >
-                                                Shop{" "}
-                                                <i className="bx bx-chevron-down"></i>
-                                            </a>
-                                        </Link>
+                                        <a
+                                            href="#"
+                                            onClick={(e) => e.preventDefault()}
+                                            className="nav-link"
+                                        >
+                                            Shop{" "}
+                                            <i className="bx bx-chevron-down"></i>
+                                        </a>
 
                                         <ul className="dropdown-menu">
                                             <li className="nav-item">
@@ -190,144 +167,116 @@ const Navbar = ({ user }) => {
 
                                                             <ul className="megamenu-submenu">
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-without-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Without
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Without
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-fullwidth"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Left
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
+                                                                        With
+                                                                        Left
+                                                                        Sidebar
+                                                                        Fullwidth
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-fullwidth"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Right
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
+                                                                        With
+                                                                        Right
+                                                                        Sidebar
+                                                                        Fullwidth
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -339,144 +288,114 @@ const Navbar = ({ user }) => {
 
                                                             <ul className="megamenu-submenu">
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-without-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Without
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Without
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-fullwidth"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Left
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
+                                                                        With
+                                                                        Left
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-fullwidth"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Right
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
+                                                                        With
+                                                                        Right
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -488,144 +407,114 @@ const Navbar = ({ user }) => {
 
                                                             <ul className="megamenu-submenu">
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-without-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Without
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Without
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-fullwidth"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Left
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
+                                                                        With
+                                                                        Left
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-fullwidth"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Right
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
+                                                                        With
+                                                                        Right
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -643,101 +532,80 @@ const Navbar = ({ user }) => {
                                                                 </li> */}
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/checkout"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Checkout
-                                                                        </a>
-                                                                    </Link>
+                                                                        Checkout
+                                                                    </a>
                                                                 </li>
-
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -748,17 +616,14 @@ const Navbar = ({ user }) => {
                                     </li>
 
                                     <li className="nav-item megamenu">
-                                        <Link href="#" activeClassName="active">
-                                            <a
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
-                                                className="nav-link"
-                                            >
-                                                Pages{" "}
-                                                <i className="bx bx-chevron-down"></i>
-                                            </a>
-                                        </Link>
+                                        <a
+                                            href="#"
+                                            onClick={(e) => e.preventDefault()}
+                                            className="nav-link"
+                                        >
+                                            Pages{" "}
+                                            <i className="bx bx-chevron-down"></i>
+                                        </a>
 
                                         <ul className="dropdown-menu">
                                             <li className="nav-item">
@@ -771,30 +636,51 @@ const Navbar = ({ user }) => {
 
                                                             <ul className="megamenu-submenu">
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/about"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            About
-                                                                            Us
-                                                                        </a>
-                                                                    </Link>
+                                                                        About Us
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/history"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
+                                                                        History
+                                                                    </a>
+                                                                </li>
+                                                                {user ? (
+                                                                    <li className="nav-item">
                                                                         <a
+                                                                            href="/auth"
+                                                                            onClick={(
+                                                                                e
+                                                                            ) => {
+                                                                                e.preventDefault();
+                                                                                handleLogout();
+                                                                            }}
+                                                                            className="nav-link"
+                                                                        >
+                                                                            Logout
+                                                                        </a>
+                                                                    </li>
+                                                                ) : (
+                                                                    <li className="nav-item">
+                                                                        <a
+                                                                            href="#"
                                                                             onClick={() =>
                                                                                 setCollapsed(
                                                                                     true
@@ -802,124 +688,68 @@ const Navbar = ({ user }) => {
                                                                             }
                                                                             className="nav-link"
                                                                         >
-                                                                            History
+                                                                            Login
                                                                         </a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                {user ? (
-                                                                    <li className="nav-item">
-                                                                        <Link
-                                                                            href="/auth"
-                                                                            activeClassName="active"
-                                                                        >
-                                                                            <a
-                                                                                onClick={(
-                                                                                    e
-                                                                                ) => {
-                                                                                    e.preventDefault();
-                                                                                    handleLogout();
-                                                                                }}
-                                                                                className="nav-link"
-                                                                            >
-                                                                                Logout
-                                                                            </a>
-                                                                        </Link>
-                                                                    </li>
-                                                                ) : (
-                                                                    <li className="nav-item">
-                                                                        <Link
-                                                                            href="#"
-                                                                            activeClassName="active"
-                                                                        >
-                                                                            <a
-                                                                                onClick={() =>
-                                                                                    setCollapsed(
-                                                                                        true
-                                                                                    )
-                                                                                }
-                                                                                className="nav-link"
-                                                                            >
-                                                                                Login
-                                                                            </a>
-                                                                        </Link>
                                                                     </li>
                                                                 )}
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/faq"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            FAQ's
-                                                                        </a>
-                                                                    </Link>
+                                                                        FAQ's
+                                                                    </a>
                                                                 </li>
-
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/404"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            404
-                                                                            Error
-                                                                            Page
-                                                                        </a>
-                                                                    </Link>
+                                                                        404
+                                                                        Error
+                                                                        Page
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/coming-soon"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Coming
-                                                                            Soon
-                                                                        </a>
-                                                                    </Link>
+                                                                        Coming
+                                                                        Soon
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/track-order"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Tracking
-                                                                            Order
-                                                                        </a>
-                                                                    </Link>
+                                                                        Tracking
+                                                                        Order
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -931,134 +761,104 @@ const Navbar = ({ user }) => {
 
                                                             <ul className="megamenu-submenu">
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/gallery"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Gallery
-                                                                        </a>
-                                                                    </Link>
+                                                                        Gallery
+                                                                    </a>
                                                                 </li>
-
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/customer-service"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Customer
-                                                                            Service
-                                                                        </a>
-                                                                    </Link>
+                                                                        Customer
+                                                                        Service
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/purchase-guide"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Purchase
-                                                                            Guide
-                                                                        </a>
-                                                                    </Link>
+                                                                        Purchase
+                                                                        Guide
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/privacy-policy"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Privacy
-                                                                            Policy
-                                                                        </a>
-                                                                    </Link>
+                                                                        Privacy
+                                                                        Policy
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/terms-of-service"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Terms
-                                                                            of
-                                                                            Service
-                                                                        </a>
-                                                                    </Link>
+                                                                        Terms of
+                                                                        Service
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/auth"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Signup
-                                                                        </a>
-                                                                    </Link>
+                                                                        Signup
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -1070,144 +870,114 @@ const Navbar = ({ user }) => {
 
                                                             <ul className="megamenu-submenu">
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-without-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Without
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Without
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-fullwidth"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Left
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
+                                                                        With
+                                                                        Left
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-fullwidth"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Right
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
+                                                                        With
+                                                                        Right
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -1219,22 +989,18 @@ const Navbar = ({ user }) => {
 
                                                             <ul className="megamenu-submenu">
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/single-products-1"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Single
-                                                                            Products
-                                                                        </a>
-                                                                    </Link>
+                                                                        Single
+                                                                        Products
+                                                                    </a>
                                                                 </li>
 
                                                                 {/* <li className="nav-item">
@@ -1244,101 +1010,80 @@ const Navbar = ({ user }) => {
                                                                 </li> */}
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/checkout"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Checkout
-                                                                        </a>
-                                                                    </Link>
+                                                                        Checkout
+                                                                    </a>
                                                                 </li>
-
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-left-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Left
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                    </a>
                                                                 </li>
 
                                                                 <li className="nav-item">
-                                                                    <Link
+                                                                    <a
                                                                         href="/products-right-sidebar-with-categories"
-                                                                        activeClassName="active"
+                                                                        onClick={() =>
+                                                                            setCollapsed(
+                                                                                true
+                                                                            )
+                                                                        }
+                                                                        className="nav-link"
                                                                     >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
+                                                                        Right
+                                                                        Sidebar
+                                                                        With
+                                                                        Categories
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -1349,582 +1094,461 @@ const Navbar = ({ user }) => {
                                     </li>
 
                                     <li className="nav-item megamenu">
-                                        <Link href="#" activeClassName="active">
-                                            <a
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
-                                                className="nav-link"
-                                            >
-                                                Collection{" "}
-                                                <i className="bx bx-chevron-down"></i>
-                                            </a>
-                                        </Link>
+                                        <a
+                                            href="#"
+                                            onClick={(e) => e.preventDefault()}
+                                            className="nav-link"
+                                        >
+                                            Collection{" "}
+                                            <i className="bx bx-chevron-down"></i>
+                                        </a>
+                                    </li>
+                                    <ul className="dropdown-menu">
+                                        <li className="nav-item">
+                                            <div className="container">
+                                                <div className="row">
+                                                    <div className="col">
+                                                        <h6 className="submenu-title">
+                                                            Shop Styles
+                                                        </h6>
 
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item">
-                                                <div className="container">
-                                                    <div className="row">
-                                                        <div className="col">
-                                                            <h6 className="submenu-title">
-                                                                Shop Styles
-                                                            </h6>
+                                                        <ul className="megamenu-submenu">
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-left-sidebar"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Left Sidebar
+                                                                </a>
+                                                            </li>
 
-                                                            <ul className="megamenu-submenu">
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-left-sidebar"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-left-sidebar-with-categories"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Left Sidebar
+                                                                    With
+                                                                    Categories
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-left-sidebar-with-categories"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-right-sidebar"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Right
+                                                                    Sidebar
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-right-sidebar"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-right-sidebar-with-categories"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Right
+                                                                    Sidebar With
+                                                                    Categories
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-right-sidebar-with-categories"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-without-sidebar"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Without
+                                                                    Sidebar
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-without-sidebar"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Without
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-left-sidebar-fullwidth"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    With Left
+                                                                    Sidebar
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-left-sidebar-fullwidth"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Left
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-right-sidebar-fullwidth"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    With Right
+                                                                    Sidebar
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-right-sidebar-fullwidth"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            With
-                                                                            Right
-                                                                            Sidebar
-                                                                            Fullwidth
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+                                                    <div className="col">
+                                                        <h6 className="submenu-title">
+                                                            Product Pages
+                                                        </h6>
 
-                                                        <div className="col">
-                                                            <h6 className="submenu-title">
-                                                                Product Pages
-                                                            </h6>
+                                                        <ul className="megamenu-submenu">
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/single-products-1"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Single
+                                                                    Products
+                                                                </a>
+                                                            </li>
 
-                                                            <ul className="megamenu-submenu">
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/single-products-1"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Single
-                                                                            Products
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
-
-                                                                {/* <li className="nav-item">
+                                                            {/* <li className="nav-item">
                                                                     <Link href="/cart" activeClassName="active">
                                                                         <a onClick={() => setCollapsed(true)} className="nav-link">Cart</a>
                                                                     </Link>
                                                                 </li> */}
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/checkout"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Checkout
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/checkout"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Checkout
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-left-sidebar"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-left-sidebar"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Left Sidebar
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-left-sidebar-with-categories"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Left
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-left-sidebar-with-categories"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Left Sidebar
+                                                                    With
+                                                                    Categories
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-right-sidebar"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-right-sidebar"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Right
+                                                                    Sidebar
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/products-right-sidebar-with-categories"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Right
-                                                                            Sidebar
-                                                                            With
-                                                                            Categories
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/products-right-sidebar-with-categories"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Right
+                                                                    Sidebar With
+                                                                    Categories
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
 
-                                                        <div className="col">
-                                                            <h6 className="submenu-title">
-                                                                Pages I
-                                                            </h6>
+                                                    <div className="col">
+                                                        <h6 className="submenu-title">
+                                                            Pages I
+                                                        </h6>
 
-                                                            <ul className="megamenu-submenu">
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/about"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            About
-                                                                            Us
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                        <ul className="megamenu-submenu">
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/about"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    About Us
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/history"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            History
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/history"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    History
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/auth"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Login
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/auth"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Login
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/faq"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            FAQ's
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/faq"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    FAQ's
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/404"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            404
-                                                                            Error
-                                                                            Page
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/404"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    404 Error
+                                                                    Page
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/coming-soon"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Coming
-                                                                            Soon
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/coming-soon"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Coming Soon
+                                                                </a>
+                                                            </li>
 
-                                                                <li className="nav-item">
-                                                                    <Link
-                                                                        href="/track-order"
-                                                                        activeClassName="active"
-                                                                    >
-                                                                        <a
-                                                                            onClick={() =>
-                                                                                setCollapsed(
-                                                                                    true
-                                                                                )
-                                                                            }
-                                                                            className="nav-link"
-                                                                        >
-                                                                            Tracking
-                                                                            Order
-                                                                        </a>
-                                                                    </Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+                                                            <li className="nav-item">
+                                                                <a
+                                                                    href="/track-order"
+                                                                    onClick={() =>
+                                                                        setCollapsed(
+                                                                            true
+                                                                        )
+                                                                    }
+                                                                    className="nav-link"
+                                                                >
+                                                                    Tracking
+                                                                    Order
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
 
-                                                        <div className="col">
-                                                            <ul className="megamenu-submenu">
-                                                                <li>
-                                                                    <div className="aside-trending-products">
-                                                                        <img
-                                                                            src="/img/navbar/navbar-img1.jpg"
-                                                                            alt="image"
-                                                                        />
+                                                    <div className="col">
+                                                        <ul className="megamenu-submenu">
+                                                            <li>
+                                                                <div className="aside-trending-products">
+                                                                    <img
+                                                                        src="/img/navbar/navbar-img1.jpg"
+                                                                        alt="image"
+                                                                    />
 
-                                                                        <div className="category">
-                                                                            <h4>
-                                                                                Top
-                                                                                Trending
-                                                                            </h4>
-                                                                        </div>
-
-                                                                        <Link href="#">
-                                                                            <a className="link-btn"></a>
-                                                                        </Link>
+                                                                    <div className="category">
+                                                                        <h4>
+                                                                            Top
+                                                                            Trending
+                                                                        </h4>
                                                                     </div>
 
-                                                                    <div className="aside-trending-products">
-                                                                        <img
-                                                                            src="/img/navbar/navbar-img2.jpg"
-                                                                            alt="image"
-                                                                        />
+                                                                    <a
+                                                                        href="#"
+                                                                        className="link-btn"
+                                                                    ></a>
+                                                                </div>
 
-                                                                        <div className="category">
-                                                                            <h4>
-                                                                                Popular
-                                                                                Products
-                                                                            </h4>
-                                                                        </div>
+                                                                <div className="aside-trending-products">
+                                                                    <img
+                                                                        src="/img/navbar/navbar-img2.jpg"
+                                                                        alt="image"
+                                                                    />
 
-                                                                        <Link href="#">
-                                                                            <a className="link-btn"></a>
-                                                                        </Link>
+                                                                    <div className="category">
+                                                                        <h4>
+                                                                            Popular
+                                                                            Products
+                                                                        </h4>
                                                                     </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+
+                                                                    <a
+                                                                        href="#"
+                                                                        className="link-btn"
+                                                                    ></a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-
+                                            </div>
+                                        </li>
+                                    </ul>
                                     <li className="nav-item">
-                                        <Link href="#">
-                                            <a
-                                                onClick={(e) =>
-                                                    e.preventDefault()
-                                                }
-                                                className="nav-link"
-                                            >
-                                                Blog{" "}
-                                                <i className="bx bx-chevron-down"></i>
-                                            </a>
-                                        </Link>
+                                        <a
+                                            href="#"
+                                            onClick={(e) => e.preventDefault()}
+                                            className="nav-link"
+                                        >
+                                            Blog{" "}
+                                            <i className="bx bx-chevron-down"></i>
+                                        </a>
 
                                         <ul className="dropdown-menu">
                                             <li className="nav-item">
-                                                <Link
+                                                <a
                                                     href="/blog1"
-                                                    activeClassName="active"
+                                                    onClick={() =>
+                                                        setCollapsed(true)
+                                                    }
+                                                    className="nav-link"
                                                 >
-                                                    <a
-                                                        onClick={() =>
-                                                            setCollapsed(true)
-                                                        }
-                                                        className="nav-link"
-                                                    >
-                                                        Grid (2 in Row)
-                                                    </a>
-                                                </Link>
+                                                    Grid (2 in Row)
+                                                </a>
                                             </li>
 
                                             <li className="nav-item">
-                                                <Link
+                                                <a
                                                     href="/blog2"
-                                                    activeClassName="active"
+                                                    onClick={() =>
+                                                        setCollapsed(true)
+                                                    }
+                                                    className="nav-link"
                                                 >
-                                                    <a
-                                                        onClick={() =>
-                                                            setCollapsed(true)
-                                                        }
-                                                        className="nav-link"
-                                                    >
-                                                        Grid (3 in Row)
-                                                    </a>
-                                                </Link>
+                                                    Grid (3 in Row)
+                                                </a>
                                             </li>
 
                                             <li className="nav-item">
-                                                <Link
+                                                <a
                                                     href="/blog3"
-                                                    activeClassName="active"
+                                                    onClick={() =>
+                                                        setCollapsed(true)
+                                                    }
+                                                    className="nav-link"
                                                 >
-                                                    <a
-                                                        onClick={() =>
-                                                            setCollapsed(true)
-                                                        }
-                                                        className="nav-link"
-                                                    >
-                                                        Right Sidebar
-                                                    </a>
-                                                </Link>
+                                                    Right Sidebar
+                                                </a>
                                             </li>
 
                                             <li className="nav-item">
-                                                <Link
+                                                <a
                                                     href="/blog-details"
-                                                    activeClassName="active"
+                                                    onClick={() =>
+                                                        setCollapsed(true)
+                                                    }
+                                                    className="nav-link"
                                                 >
-                                                    <a
-                                                        onClick={() =>
-                                                            setCollapsed(true)
-                                                        }
-                                                        className="nav-link"
-                                                    >
-                                                        Blog Details
-                                                    </a>
-                                                </Link>
+                                                    Blog Details
+                                                </a>
                                             </li>
                                         </ul>
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link
+                                        <a
                                             href="/contact"
-                                            activeClassName="active"
+                                            onClick={() => setCollapsed(true)}
+                                            className="nav-link"
                                         >
-                                            <a
-                                                onClick={() =>
-                                                    setCollapsed(true)
-                                                }
-                                                className="nav-link"
-                                            >
-                                                Contact
-                                            </a>
-                                        </Link>
+                                            Contact
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -1944,19 +1568,16 @@ const Navbar = ({ user }) => {
 
                                 <div className="option-item">
                                     <div className="cart-btn">
-                                        <Link href="#">
-                                            <a
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    toggleModal();
-                                                }}
-                                            >
-                                                <i className="bx bx-shopping-bag"></i>
-                                                <span>
-                                                    {cartProducts.length}
-                                                </span>
-                                            </a>
-                                        </Link>
+                                        <a
+                                            href="#"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                toggleModal();
+                                            }}
+                                        >
+                                            <i className="bx bx-shopping-bag"></i>
+                                            <span>{cartProducts.length}</span>
+                                        </a>
                                     </div>
                                 </div>
 
