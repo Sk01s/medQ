@@ -12,7 +12,7 @@ import BlogPostStyleOne from "../components/Common/BlogPostStyleOne";
 import FacilityStyleOne from "../components/Common/FacilityStyleOne";
 
 const Index = ({ products }) => {
-    // console.log(products)
+    console.log(products);
     return (
         <>
             <BannerSlider />
@@ -25,7 +25,7 @@ const Index = ({ products }) => {
                 <CategoriesStyleTwo />
             </div>
 
-            <BestSellingProductsStyleOne products={products} />
+            {/* <BestSellingProductsStyleOne products={products} /> */}
 
             <div className="pb-40">
                 <ProductsPromotionStyleOne />
@@ -52,7 +52,7 @@ Index.getInitialProps = async (ctx) => {
     const size = 8;
     const searchTerm = "medical";
     // fetch data on server
-    const url = `${baseUrl}/api/products`;
+    const url = `${baseUrl || "https://medq.vercel.app"}/api/products`;
     const payload = { params: { page, size, searchTerm } };
     try {
         const response = await axios.get(url, payload);
