@@ -1,6 +1,3 @@
-const baseUrl =
-    process.env.PROD === "production"
-        ? "https://medq.vercel.app"
-        : "http://localhost:3000";
+const baseUrl = process.env.BASE_URL;
 
 export default baseUrl;
